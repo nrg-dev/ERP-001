@@ -1,4 +1,4 @@
-# ERP2
+# ERP front end code
 
 
 ## Build
