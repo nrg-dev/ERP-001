@@ -14,20 +14,13 @@ import { CustomMaterialModule } from "./core/material.module";
 import { LoginComponent } from './login/login.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SalesModule } from './sales/sales.module';
-import { EmployeeModule } from './employee/employee.module';
+
 import { VendorcustomerModule } from './vendorcustomer/vendorcustomer.module';
-import { CategoryproductModule } from './categoryproduct/categoryproduct.module';
-import { PurchaseModule } from './purchase/purchase.module';
-import { FinanceModule } from './finance/finance.module';
-import { StockModule } from './stock/stock.module'; 
-import { UsermgtModule } from './usermgt/usermgt.module';
-import { ReportModule } from './report/report.module';
+
 import { AlertComponent } from './_directives/index';
 import { AlertService, AuthenticationService,UserService } from './_services/index';
 
 import { MatDialogModule, MatFormFieldModule } from '@angular/material';
-import { FontAwesomeModule } from 'fontawesome';
 import {
   MatAutocompleteModule,
   MatBadgeModule, 
@@ -85,15 +78,7 @@ const appRoutes: Routes = [
 
 
 
-      { path: '', loadChildren: './employee/employee.module#EmployeeModule'   },
       { path: '', loadChildren: './vendorcustomer/vendorcustomer.module#VendorcustomerModule'  },
-      { path: '', loadChildren: './categoryproduct/categoryproduct.module#CategoryproductModule' },
-      { path: '', loadChildren: './purchase/purchase.module#PurchaseModule'  },
-      { path: '', loadChildren: './sales/sales.module#SalesModule'   },
-      { path: '', loadChildren: './finance/finance.module#FinanceModule'  },
-      { path: '', loadChildren: './stock/stock.module#StockModule'  },
-      { path: '', loadChildren: './report/report.module#ReportModule'  },
-      { path: '', loadChildren: './usermgt/usermgt.module#UsermgtModule'  }
 
     ],
   },
@@ -163,15 +148,8 @@ const appRoutes: Routes = [
       { useHash: true , onSameUrlNavigation: 'reload'} // <-- debugging purposes only
     ),
     CustomMaterialModule,
-    EmployeeModule,
     VendorcustomerModule,
-    CategoryproductModule,
-    PurchaseModule,
-    SalesModule,
-    FinanceModule,
-    StockModule,
-    ReportModule,
-    UsermgtModule,
+
     MatDialogModule,
     //FontAwesomeModule.forRoot() 
     MatMomentDateModule

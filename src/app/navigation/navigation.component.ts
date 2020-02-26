@@ -57,8 +57,7 @@ showToggle: string;
 
      });
 
-     const salesdata = require(".././salestotaltable.json");
-    this.allproductlist=salesdata;
+
     this.dataSource = new MatTableDataSource(this.allproductlist);
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
@@ -90,54 +89,15 @@ showToggle: string;
 
     this.menuItems = [
       new MenuItem("DashBoard","/landingpage"),
-      new MenuItem("Employment","employeedata"),
-      //new MenuItem("TimeSheet","timesheet"),
       new MenuItem("Vendor & Customer","vendoradd"),
-      new MenuItem("Category & Product","categoryitem"),
-      new MenuItem("Purchase","purchaseadd"),
-      new MenuItem("Sales","salesorder"),
-      new MenuItem("Finance","pettycashadd"),
-      new MenuItem("Stock","stockadd"),
-      new MenuItem("Report","allreport"),
-      new MenuItem("User Management","usermgtadd"),
-      new MenuItem("Log Out","logout"),
-
-      new MenuItem("",""),
-
     ]
 
 
     this.menuItemsIcons = [
       new MenuItem("./assets/images/dashboard.png","/landingpage"),
-      new MenuItem("./assets/images/employee.png","employeelist"),
-      //new MenuItem("./assets/images/employee.png","employeelist"),
       new MenuItem("./assets/images/vendor-customer.png", "Customervendoradd"),
-      new MenuItem("./assets/images/category-product.png", "Productcategoryadd"),
-      new MenuItem("./assets/images/circle-cropped.png","purchaseadd"),
-      new MenuItem("./assets/images/sales.png","salesorder"),
-      new MenuItem("./assets/images/finance.png","pettycashadd"),
-      new MenuItem("./assets/images/stock.png","stockadd"),
-      new MenuItem("./assets/images/reports.png","allreport"),
-      new MenuItem("./assets/images/usermgt.png","usermgtadd"),
-      new MenuItem("./assets/images/logout.png","login"),
-
-      new MenuItem('./assets/images/null.png',""),
 
 
-/*
-new MenuItem("home","/landingpage"),
-new MenuItem("./assets/images/employee.png","employeelist"),
-new MenuItem("person", "Customervendoradd"),
-new MenuItem("home", "Productcategoryadd"),
-new MenuItem("shopping_cart","purchaseadd"),
-new MenuItem("home","salesorder"),
-new MenuItem("home","pettycashadd"),
-new MenuItem("home","stockadd"),
-new MenuItem("home","allreport"),
-new MenuItem("contacts","usermgtadd"),
-new MenuItem("home","login"),
-
-*/
     ]
 
   }

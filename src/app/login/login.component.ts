@@ -32,19 +32,9 @@ export class LoginComponent implements OnInit {
     console.log("user name : password"+this.model.currentusername+this.model.currentpassword);
     localStorage.setItem('currentusername',this.model.currentusername);
     localStorage.setItem('currentpassword',this.model.currentpassword);
+    this.router.navigate(['/landingpage']);
 
-    if(this.model.currentusername!=="admin"){
-     // this.alertService.info(message);
-     // this.alertService.warn(message);
-     // this.alertService.success(message);
-      this.alertService.error(message);
-     // this.alertService.success(message);
-
-    }
-    else {
-      this.router.navigate(['/landingpage']);
-
-    }
+    
 
   }
 
